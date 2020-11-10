@@ -18,6 +18,8 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
+- publish: $(System.DefaultWorkingDirectory)/bin/HelloWorld
+  artifact: HelloWorld
 
 - task: NuGetCommand@2
   inputs:
@@ -53,4 +55,4 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
-    publishLocation: 'FilePath'
+    publishLocation: 'Container'
