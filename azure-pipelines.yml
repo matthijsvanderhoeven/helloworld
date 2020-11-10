@@ -41,6 +41,6 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Pipeline.Workspace)'
-    artifact: 'drop/s/bin'
+    targetPath: './helloworld/bin'
+    artifact: 'drop'
     publishLocation: 'pipeline'
