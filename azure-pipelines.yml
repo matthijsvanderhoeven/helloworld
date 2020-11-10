@@ -41,6 +41,6 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: 'helloworld/bin'
     ArtifactName: 'drop'
     publishLocation: 'Container'
