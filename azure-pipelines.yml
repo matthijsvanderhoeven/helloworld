@@ -41,6 +41,6 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: './helloworld/bin'
+    targetPath: './bin'
     artifact: 'drop'
     publishLocation: 'pipeline'
