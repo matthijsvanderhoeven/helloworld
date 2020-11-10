@@ -18,8 +18,8 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
-- publish: $(System.DefaultWorkingDirectory)/bin/HelloWorld
-  artifact: HelloWorld
+- publish: $(System.DefaultWorkingDirectory)/bin/Debug
+  artifact: Debug
 
 - task: NuGetCommand@2
   inputs:
