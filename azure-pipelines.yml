@@ -4,7 +4,9 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
-- master
+- main
+- test0
+- test1
 
 pool:
   vmImage: 'windows-latest'
@@ -32,3 +34,13 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: 
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: './bin'
+    artifact: 'drop'
+    publishLocation: 'pipeline'
