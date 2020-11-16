@@ -1,8 +1,11 @@
 using System;
-public class HelloWorld
+namespace HelloWorld
 {
-    public static void Main(string[] args)
+    public class HelloWorld
     {
-        Console.WriteLine("Hello World! test0");
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World! test0");
+        }
     }
 }
