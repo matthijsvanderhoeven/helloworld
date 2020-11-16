@@ -33,9 +33,6 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: NuGetToolInstaller@1
-  inputs:
-    versionSpec: 
 
 - task: PublishPipelineArtifact@1
   inputs:
